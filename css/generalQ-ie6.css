@@ -1,0 +1,83 @@
+
+.mainBodyContainer{
+	width:100%;
+	height:100%;
+	background:#000;
+}
+
+/* ------------------------------------------------ FAQ 1 - 4 -------------------------------------------------- */
+
+.faqNav{
+	width: 914px;
+	height: 25px;
+	background: #000;
+	padding: 20px;
+}
+.faqNavBody{
+	width:894px;
+	height:auto;
+	background:#1b1b1b;
+	padding:30px;
+}
+.faqNavBody p{
+	color:#fff;
+	font-size:12px;
+	line-height:25px;
+	font-weight:normal;
+	text-align:left;
+}
+
+.faqNavBody h1{
+	font-size:18px;
+	color:#fff;
+	line-height:25px;
+}
+.faqNavBody ol{
+	margin:0;
+	margin-left:25px;
+	color:#FFFF00;
+	font-size:15px;
+	font-weight:normal;
+	list-style:decimal;
+}
+.faqNavBody ol li{
+	line-height:25px;	
+}
+
+.faqNav a.faqButton,
+.faqNav a.faqButton{
+	width:75px;
+	height:30px;
+	background:url(../images/depositButton.png) no-repeat;
+	border:none;
+	text-decoration:none;
+	font-size:15px;
+	color:#FFF;
+	line-height:24px;
+	padding:6px 7px;
+	text-align:center;
+}
+.faqNav a.faqButton:hover{
+	color:#ffff00;
+}
+.faqNav a.faqActive {
+	color:#FF0;
+}
+
+#faqTable{
+	width:100%;
+	height:auto;
+}
+#faqTable td{
+	width:25%;
+	height:29px;
+	text-align:center;
+}
+
+.faqNavBody ol#nestedList{
+	margin:0;
+	margin-left:25px;
+	color:#FFF;
+	font-size:15px;
+	font-weight:normal;
+}

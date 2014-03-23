@@ -1,0 +1,289 @@
+/*
+	Name: Tianlong Poker EA (NOT IE)
+	Date Created: 9/27/2013 11:32 AM
+	Author: Jose Nino N. Garcia
+*/
+
+/*============================= CONTAINER  =============================*/
+
+.RightFormContainer
+{
+		
+}
+
+.RFCContainer
+{
+		
+}
+
+.tabsTitleUI
+{
+	border-bottom:1px solid #455472;
+	width:730px;
+}
+
+.tabsLeftPportion
+{
+	margin:0;
+	padding:0;
+	list-style:none;	
+	float:left;
+}
+
+.tabsLeftPportion li
+{
+	float:left;
+	margin-right:2px;	
+}
+
+a.tblpH
+{
+	display:block;	
+	padding:7px;
+	border-top:1px solid #455472;
+	border-left:1px solid #455472;
+	border-right:1px solid #455472;
+	width:80px;
+	text-align:center;
+	font-weight:bold;
+	text-decoration:none;
+	color:#000000;
+	background:#ececec;
+}
+
+a.currentTab
+{
+	background-color:#cccccc !important;
+}
+
+.tabsRightPortion
+{
+	float:right;	
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+
+.tabsRightPortion li
+{
+	float:left;
+	margin-left:5px;
+	padding-top:10px;	
+}
+
+.tabsRightPortion li a
+{
+	font-size:12px;
+	text-decoration:none;
+	color:#000000;	
+}
+
+/* accountListContainer start */
+
+.depositOneContainer
+{
+	background-color: #e2e2e2;
+	border: 1px solid #acacac;
+	margin-top: 10px;
+	padding: 15px;
+}
+
+.depositContainerLeft
+{
+	float: left;
+	width:265px;
+}
+
+.depositContainerRight
+{
+	float:left;
+	padding-top: 2px;
+	padding-left: 10px;
+	padding-bottom: 5px;
+	width: 400px;
+}
+
+.depositContainerRightContent
+{
+	border: 1px solid #aeaeae;
+	margin-bottom: 10px;
+}
+
+.depositOneTabs
+{
+	margin-top: 10px;
+}
+
+.depositOneTabsLeftPportion
+{
+	margin:0;
+	padding:0;
+	list-style:none;	
+	float:left;
+}
+
+.depositOneTabsLeftPportion li
+{
+	float:left;	
+	border-top:1px solid #acacac;
+	border-left:1px solid #acacac;
+	border-right:1px solid #acacac;
+	padding:7px;
+	width:80px;
+	background:#ececec;
+	text-align:center;
+	margin-right:2px;
+}
+
+.depositOneTabsLeftPportion li a
+{
+	color:#000000;
+	text-decoration:none;
+	font-size:12px;	
+	font-weight:bold;
+}
+
+li.currentTab
+{
+	background-color:#cccccc;	
+	border-top: 1px solid #445571;
+	border-left: 1px solid #445571;
+	border-right: 1px solid #445571;
+}
+
+.depositOneContainer table
+{
+	border-collapse: collapse;
+}
+
+.depositOneContainer table tr td
+{
+	color: #000000;
+	font-size: 13px;
+	font-weight: bold;
+	font-family: microsoft yahei;
+	padding-bottom: 7px;
+}
+
+.depositOneContainer table tr td:first-child 
+{
+	color: #000000;
+	font-size: 13px;
+	font-weight: bold;
+	font-family: microsoft yahei;
+	text-align: right;
+}
+
+.depositOneContainer select
+{
+	padding-top: 3px;
+	padding-bottom: 3px;
+	color: #575757;
+	width: 174px;
+}
+
+.depositOneContainer input
+{
+	color: #575757;
+	padding-top: 4px;
+	padding-bottom: 3px;
+	width: 150px;
+	font-size: 11px;
+	outline: none;
+}
+
+.buttonSubmit
+{
+	margin-top: 15px;
+	background:url('../../images/button1.png') no-repeat 0 0;
+	width: 130px;
+	height:32px;
+	border: none;
+	cursor: pointer;
+	outline: none;
+}
+.buttonSubmit:hover
+{
+	background:url('../../images/button1.png') no-repeat 0 -32px;
+}
+
+.dccContent
+{
+	padding-left: 15px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 15px;
+	width: 391px;
+}
+
+.dccContent ul
+{
+	list-style: none;
+	font-size: 12px;
+	margin-bottom: 5px;
+	color: #ff0000;
+	font-weight: bold;	
+}
+
+.dccContent ul li
+{
+	margin-bottom: 10px;
+}
+
+.dccContent ol
+{
+	font-size: 12px;
+	margin-bottom: 5px;
+	color: #626a70;
+	padding-left: 20px;
+}
+
+.dccContent ol li
+{
+	margin-bottom: 10px;
+}
+
+.blueText
+{
+	color: #0581d8;
+	display: inline;
+}
+
+.grayArrow
+{
+	margin-top: 5px;
+	display: block;
+	background:url('../../images/grayArrow.png') no-repeat;
+	padding-top: 3px;
+	padding-left: 4px;
+	width: 108px;
+	height: 22px;
+	font-size: 12px;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.grayArrow2
+{
+	margin-top: 5px;
+	display: block;
+	background:url('../../images/grayArrow2.png') no-repeat;
+	padding-top: 3px;
+	padding-left: 4px;
+	width: 138px;
+	height: 22px;
+	font-size: 12px;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+span.blackClr
+{
+	color:#000000 !important;
+}	
+
+a.rdFnt
+{
+	color:#ff0000 !important;
+	text-decoration:none;	
+}

@@ -1,0 +1,55 @@
+
+/*
+	Promotion Page CSS File
+*/
+
+.threeBoxContainer{
+	width:;
+}
+
+.Init_Box{
+	float:left;
+	width:313px;
+	height:152px;
+}
+
+.Mid_Box{
+	float:left;
+	height:132px;
+	width: 580px;
+	background:#202020;
+	padding:10px;
+}
+
+.Mid_Box h3{
+	color:#ffd200;
+	font-size:16px;
+}
+
+.Mid_Box p{
+	font-size:14px;
+	margin-top:5px;
+	line-height: 20px;
+	color:#ffffff;
+}
+
+.Final_Box{
+	float:left;
+	width:39px;
+	height:154;
+}
+
+.Final_Box{
+	background-image:url('../images/promo/rightBut.png');
+	height:152px;
+	width:39px;
+	cursor: pointer;
+}
+
+.yhhd_wz14 {
+	font-size: 14px;
+	line-height: 22px;
+	color: #FFFFFF;
+	text-decoration: none;
+	padding-left:10px;
+}

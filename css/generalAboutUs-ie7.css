@@ -1,0 +1,102 @@
+
+.mainBodyContainer{
+	width:100%;
+	height:100%;
+	background:#000;
+}
+
+
+/* --------------------------------------------- About Us --------------------------------------------- */
+
+.firstParagraph{
+	width:894px;
+	height:auto;
+	padding:30px;
+}
+.firstParagraph p{
+	color:#fff;
+	font-size:14px;
+	line-height:23px;
+	font-weight:normal;
+}
+.aboutUsTitle {
+	background:#343434;
+	height:21px;
+	padding:6px 0 6px 30px;
+}
+.aboutUsTitle h1{
+	font-size: 18px;
+	color:#f1f405;
+}
+.secondParagraph{
+	width:894px;
+	height:auto;
+	padding:30px;
+}
+.secondParagraph p{
+	color:#fff;
+	font-size:14px;
+	line-height:23px;
+	font-weight:normal;
+}
+.secondParagraph ol{
+	margin:0;
+	margin-left:25px;
+	color:#fff;
+	font-size:14px;
+	line-height:25px;
+	font-weight:normal;
+}
+.secondParagraph ol li{
+	line-height:25px;
+}
+
+.thirdParagraph{
+	width:894px;
+	height:auto;
+	padding:30px;
+}
+.thirdParagraph ol{
+	margin:0;
+	margin-left:25px;
+	color:#fff;
+	font-size:14px;
+	line-height:23px;
+	font-weight:normal;
+}
+.thirdParagraph ol li{
+	line-height:25px;
+}
+
+/* Deposit 1 */
+
+.depositNav{
+	width:894px;
+	height:65px;
+	background:#000;
+}
+.depositNavBody{
+	width:894px;
+	height:auto;
+	background:#1b1b1b;
+	padding:30px;
+}
+.depositNavBody p{
+	color:#fff;
+	font-size:12px;
+	line-height:25px;
+	font-weight:normal;
+}
+.depositNavBody p span#depositTitle{
+	font-size:18px;
+}
+.depositNavBody h1{
+	font-size:18px;
+}
+.depositNavBody ol{
+	margin:0;
+	margin-left:25px;
+	color:#fff;
+	font-size:12px;
+	font-weight:normal;
+}

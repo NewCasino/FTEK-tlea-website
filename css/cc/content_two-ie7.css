@@ -1,0 +1,183 @@
+/*
+	Name: Tianlong Poker EA 
+	Date Created: 9/27/2013 11:32 AM
+	Author: Jose Nino N. Garcia
+*/
+
+
+/*============================= TABS =============================*/
+
+.RightFormContainer
+{
+		
+}
+
+.RFCContainer
+{
+		
+}
+
+.tabsTitleUI
+{
+	border-bottom:1px solid #455472;
+}
+
+.tabsLeftPportion
+{
+	margin:0;
+	padding:0;
+	list-style:none;	
+	float:left;
+}
+
+.tabsLeftPportion li
+{
+	float:left;
+	margin-right:2px;	
+}
+
+a.tblpH
+{
+	display:block;	
+	padding:7px;
+	border-top:1px solid #455472;
+	border-left:1px solid #455472;
+	border-right:1px solid #455472;
+	width:80px;
+	text-align:center;
+	font-weight:bold;
+	text-decoration:none;
+	color:#000000;
+	background:#ececec;
+}
+
+a.currentTab
+{
+	background-color:#cccccc !important;
+}
+
+.tabsRightPortion
+{
+	float:right;	
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+
+.tabsRightPortion li
+{
+	float:left;
+	margin-left:5px;
+	padding-top:10px;	
+}
+
+.tabsRightPortion li a
+{
+	font-size:12px;
+	text-decoration:none;
+	color:#000000;	
+}
+
+/*============================= My Account Container =============================*/
+
+.formContainer
+{
+		
+}
+
+.leftPhase, .rightPhase
+{
+	width:300px;	
+}
+
+.leftPhase input[type="text"], .rightPhase input[type="text"]
+{
+	width:	250px;
+	border:1px solid #a4a4a4;
+	margin-top:5px;
+	background:#ebebe4;
+	font-size:12px;
+	height:23px;
+	color:#616161;	
+}
+
+.leftPhase
+{
+	float:left;
+	margin-top:10px;
+	font-size:12px;
+}
+
+.leftPhase label, .rightPhase label
+{
+	display:block;
+	font-size:12px;
+	font-weight:bold;
+}
+
+.rightPhase
+{
+	float:left;
+	margin-left:20px;
+	margin-top:10px;	
+}
+
+.hdTitle
+{
+	margin-top:10px;
+	border-bottom:1px solid #a7a4c3;	
+}
+
+.hdTitle h2
+{
+	font-weight:bolder;	
+}
+
+.leftPhase input
+{
+	vertical-align:middle;
+	color:#616161;	
+}
+
+.LPSubButtons
+{
+	list-style:none;
+	padding:0;
+	margin:0;	
+}
+
+.LPSubButtons li
+{
+	float:left;
+	margin-right:10px;	
+}
+
+a.submitFirst
+{
+	display:block;
+	background:url('../../images/button3.png');	
+	height:32px;
+	width:132px;
+	cursor:pointer;
+}
+
+a.submitFirst:hover
+{
+	background:url('../../images/button3.png');
+	background-position:0px -64px;
+}
+
+a.submitSecond
+{
+	display:block;
+	background:url('../../images/button2.png');	
+	height:32px;
+	width:132px;
+	cursor:pointer;
+}
+
+a.submitSecond:hover
+{
+	background:url('../../images/button2.png');
+	background-position:0px -64px;
+}

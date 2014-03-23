@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="CustomerCenter.master.cs" Inherits="CustomerCenter" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript" language="javascript" src="../js/ccpage.js"></script>
+    <script type="text/javascript" language="javascript" src="../js/jquery.pngFix.pack.js"></script>
+    <script type="text/javascript" language="javascript" src="../js/jquery.BlockUI.js"></script>
+    <style type="text/css">
+		img, div, a, input { 
+			 behavior: url(iepngfix.htc) 
+		}
+	</style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div class="MemCent_Wrapper">
+            <div class="MemCent_Header">
+               <TianlongHeadCC:SiteHeader runat="server" ID="AiwinHeaderSite" />
+                 <!-- Site Navigation Start Here -->
+               <TianlongNavTop:Navigation runat="server" ID="AiwinTopNavigation" />
+            </div><!-- MemCent_Header -->
+
+            <div class="mssContainer">
+                <div class="containerNews">
+                    <div class="icnlLeft">
+                      <img src="../images/marquee.jpg" height="30" width="96" alt="" />
+                    </div><!-- icnlLeft -->
+                    <div class="icnlRight">
+                	    <marquee direction="left" scrollamount="5" scrolldelay="3" onmouseover="this.stop()" onmouseout="this.start();">
+                          <p>恭喜获奖玩家： ： 恭喜昵称为“ Eric Lynch”“PrimordialAA”“Bigdogpckt5s”“StevieDevlin”的玩家</p>
+                        </marquee>
+                    </div><!-- icnlRight -->
+                    <div class="clear"></div>
+                </div><!-- containerNews -->
+            </div><!-- mssContainer -->
+
+             <div class="MemCentWaterMark">
+        	  <div class="MCWM_MainContent">
+            	<div class="MCWMMCWrapper">
+                  <div class="arrowThumb"></div>
+                    <TianlongLeftSidebar:LeftSidebar runat="server" ID="AiwinLeftSideBar" />
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                 </div><!-- MCWMMCWrapper -->
+               </div><!-- MCWM_MainContent -->
+
+               <TianlongFooterCC:FooterCC runat="server" ID="AiwinFooterMain" />
+            </div><!-- MemCentWaterMark -->
+          </div><!-- MemCent_Wrapper -->
+
+          <TianlongCustomerCenter:CustomerChat runat="server" ID="TianlongCC" />
+          <CCCustomer:CCenters runat="server" ID="TianlongQC" />
+    </div>
+    </form>
+</body>
+</html>

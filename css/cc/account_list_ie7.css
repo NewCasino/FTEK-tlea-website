@@ -1,0 +1,253 @@
+/*
+	Name: Tianlong Poker EA (NOT IE)
+	Date Created: 9/27/2013 11:32 AM
+	Author: Jose Nino N. Garcia
+*/
+
+/*============================= CONTAINER  =============================*/
+
+.RightFormContainer
+{
+	
+}
+
+.RFCContainer
+{
+		
+}
+
+.tabsTitleUI
+{
+	border-bottom:1px solid #445571;
+	margin: 0 auto;
+	padding: 0;
+}
+
+
+.tabsRightPortion
+{
+	float:right;	
+	padding:0;
+	margin:0 auto;
+	list-style:none;
+}
+
+.tabsRightPortion li
+{
+	float:left;
+	margin-left:5px;
+	padding-top:10px;	
+}
+
+
+/* accountListContainer start */
+
+.accountListContainer
+{
+	background-color: #e2e2e2;
+	border: 1px solid #acacac;
+	margin-top: 10px;
+	padding: 15px;
+}
+
+.accountListTabs
+{
+	font-size: 12px;
+}
+
+.accountListContainer h5
+{
+	font-size: 26px;
+	font-weight: normal;
+	font-family: microsoft yahei;
+	color: #000000;
+}
+
+.accListTabsLeftPportion
+{
+	margin:0;
+	padding:0;
+	list-style:none;	
+	float:left;
+}
+
+.accListTabsLeftPportion li
+{
+	float:left;	
+	border-top:1px solid #acacac;
+	border-left:1px solid #acacac;
+	border-right:1px solid #acacac;
+	padding:7px;
+	width:80px;
+	background:#ececec;
+	text-align:center;
+	margin-right:2px;
+}
+
+.accListTabsLeftPportion li a
+{
+	color:#000000;
+	text-decoration:none;
+	font-size:12px;	
+	font-weight:bold;
+}
+
+li.currentTab
+{
+	background-color:#cccccc;	
+	border-top: 1px solid #445571;
+	border-left: 1px solid #445571;
+	border-right: 1px solid #445571;
+}
+
+.accountListTable
+{
+}
+
+.accountListTable table, th, tr, td
+{
+	border: 1px solid #445571;
+	border-collapse:collapse;
+}
+
+.accountListTable th
+{
+	font-weight: bolder;
+	font-size: 12px;
+	color: #1e1e1e;
+	padding-left: 36px;
+	padding-right: 36px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+.accountListTable td {
+	font-size: 11px;
+	padding: 5px;
+	text-align: center;
+	background-color: #ffffff;
+}
+
+.pagination
+{
+	font-size: 10px;
+	float: right;
+	margin-top: 7px;
+	color: #323232;
+}
+
+.pagination select
+{
+	font-size: 11px;
+	color: #575757;
+}
+
+.pagination .sample
+{
+	width: 20px;
+	font-size: 11px;
+	color: #575757;
+}
+
+.pagination span {
+	margin-left: 3px;
+}
+
+.pagination a
+{
+	cursor: pointer;
+	text-decoration: none;
+	color: #575757;
+	font-size: 11px;
+}
+
+.pagination a:hover
+{
+	background-color: #c8c8c8;
+	padding-top: 3px;
+	padding-bottom: 4px;
+}
+
+.sevenTabs
+{
+	border-left: 1px solid #445571;
+	border-right: 1px solid #445571;
+	border-bottom: 1px solid #445571;
+	padding: 10px;
+	width: 676px;
+	margin: 0 auto;
+}
+
+.tabsNew li
+{
+	float:left;	
+	border-top:1px solid #acacac;
+	border-left:1px solid #acacac;
+	border-right:1px solid #acacac;
+	width:auto;
+	background:#ececec;
+	text-align:center;
+	margin-right:2px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+.tabsNew li a
+{
+	color:#000000;
+	text-decoration:none;
+	font-size:12px;	
+	font-weight:bold;
+	padding: 10px;
+}
+
+li.currentTab
+{
+	background-color:#cccccc;	
+	border-top: 1px solid #445571;
+	border-left: 1px solid #445571;
+	border-right: 1px solid #445571;
+}
+
+.clsBTR
+{
+	display:none;
+}
+
+.clsBTRie7
+{
+	display:block;	
+}
+
+.tabsLeftPportion
+{
+	margin:0 auto;
+	padding:0;
+	list-style:none;	
+}
+
+.tabsLeftPportion li
+{
+	float:left;	
+	margin-right:3px;
+}
+
+.tabsLeftPportion a.tblpH
+{
+	display:block;	
+	padding:7px;
+	border-top:1px solid #455472;
+	border-left:1px solid #455472;
+	border-right:1px solid #455472;
+	width:80px;
+	text-align:center;
+	font-weight:bold;
+	text-decoration:none;
+	color:#000000;
+	background:#ececec;
+}
+
+.tabsLeftPportion a.currentTab
+{
+	background-color:#cccccc !important;
+}

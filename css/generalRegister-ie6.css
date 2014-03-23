@@ -1,0 +1,378 @@
+
+/* ================= REGISTER PAGE ================= */
+
+.registerBody
+{
+	font-size:16px;
+	color:#474747;
+	background:#FFF;
+	height: auto;
+	float: left;
+}
+
+.registerTable
+{
+	width:690px;
+	height:auto;
+}
+.registerTable td:first-child
+{
+	width:140px;
+	text-align:right;
+	font-weight:bold;
+	font-size:12px;
+}
+.registerTable tr
+{
+	margin-bottom:10px;
+}
+.registerTable td 
+{
+	width:250px;
+	padding:5px 0px;
+}
+.registerTable td input
+{
+	width:250px;
+	height:22px;
+	padding:2px;
+	color:#545454;
+}
+.registerTable td input:focus
+{
+	background:#e8e8e8;
+	color:#333;
+}
+.registerTable td span.required
+{
+	color:#ff0008;
+	font-weight:bold;
+}
+.registerTable td p
+{
+	margin-left:20px;
+	font-size:12px;
+	color:#333;
+}
+
+.registerBody .regTopButton
+{
+	width:189px;
+	height:40px;
+	background:url(../images/regTableButton.png) no-repeat;
+	border:none;
+	cursor:pointer;
+}
+.regBottomButton
+{
+	width:189px;
+	height:40px;
+	background:url(../images/regTableTwoButton.png) no-repeat;
+	border:none;
+	cursor:pointer;
+}
+.regBottomButton
+{
+	width:189px;
+	height:40px;
+	background:url(../images/regTableTwoButton.png) no-repeat;
+	border:none;
+	cursor:pointer;
+}
+.registerBody input[type=checkbox],
+.registerBody .regBottomButton, .regTopButton
+{
+	margin-left:150px;
+	margin-bottom:10px;
+
+}
+.checkboxLabel{
+	font-size:12px;
+	color:#191919;
+}
+h3
+{
+	font-size:16px;
+}
+.registerLeftPanel h5
+{
+	font-size:12px;
+	font-weight:normal;
+}
+.registerTable .selectRow 
+{
+	width:258px;
+	height:28px;
+	color:#545454;
+}
+.registerTable td[colspan="2"]
+{
+	text-align:left;
+}
+
+/* ================= REGISTER PAGE ================= */
+
+
+.registerLeftPanel{
+	float:left;
+}
+.registerRightPanel{
+	float:left;
+}
+.registerTable
+{
+	width:690px;
+	height:auto;
+	margin-top:10px;
+}
+.registerTable td:first-child
+{
+	width:140px;
+	text-align:right;
+	font-weight:bold;
+	font-size:12px;
+}
+.registerTable tr
+{
+	margin-bottom:10px;
+}
+.registerTable td 
+{
+	width:250px;
+	padding:5px 0px;
+}
+.registerTable td input
+{
+	width:250px;
+	height:22px;
+	padding:2px;
+	color:#545454;
+}
+.registerTable td input:focus
+{
+	background:#e8e8e8;
+	color:#333;
+}
+.registerTable td span.required
+{
+	color:#ff0008;
+	font-weight:bold;
+}
+.registerTable td p
+{
+	margin-left:20px;
+	font-size:12px;
+	color:#333;
+}
+.registerTable select
+{
+	width:79px;
+	height:28px;
+	color:#545454;
+}
+.regTopButton
+{
+	width:189px;
+	height:40px;
+	background:url(../images/regTableButton.png) no-repeat;
+	border:none;
+	cursor:pointer;
+}
+.regBottomButton
+{
+	width:189px;
+	height:40px;
+	background:url(../images/regTableTwoButton.png) no-repeat;
+	border:none;
+	cursor:pointer;
+}
+.regBottomButton
+{
+	width:189px;
+	height:40px;
+	background:url(../images/regTableTwoButton.png) no-repeat;
+	border:none;
+	cursor:pointer;
+}
+.registerBody input[type=checkbox],
+.registerBody .regBottomButton
+{
+	margin-left:150px;
+	margin-bottom:10px;
+
+}
+.checkboxLabel{
+	font-size:12px;
+	color:#191919;
+}
+.registerBody h3
+{
+	font-size:16px;
+}
+.registerBody h2
+{
+	font-size:16px;
+	color:#ff0008;
+	padding-bottom:8px;
+	border-bottom:1px solid #b1b1b1;
+	margin-bottom:10px;
+}
+.registerBody h5
+{
+	font-size:12px;
+	font-weight:normal;
+}
+.registerTable .selectRow 
+{
+	width:258px;
+	height:28px;
+	color:#545454;
+}
+.registerTable td[colspan="2"]
+{
+	text-align:left;
+}
+
+
+/*--------------- CHAT PANEL------------------ */
+
+.cspanel{
+	float:left;
+	margin-left:10px;
+	margin-top:5px;
+	width:244px;
+	height:289px;
+	background-color: #000000;
+}
+.cspanel h4{
+	text-align:center;
+	color:#ffffff;
+	line-height: 2em;
+	font-size: 20px;
+	margin-bottom:-2px;
+}
+
+.cspanel .labelcontainer{
+	background-color:#313131;
+	width:244px;
+	height:51px;
+	border-bottom:#4a4a4a solid 1px;
+}
+
+.cspanel .qq-icon, 
+.cspanel .email-icon,
+.cspanel .game-icon,
+.cspanel .qq-content, 
+.cspanel .email-content,
+.cspanel .game-content{
+	float:left;
+}
+
+.cspanel .qq-icon,
+.cspanel .email-icon,
+.cspanel .game-icon{
+	margin-top:20px;
+}
+
+.cspanel .qq-icon{
+	margin-left:20px;
+}
+
+.cspanel .email-icon{
+	margin-left:18px;
+}
+
+.cspanel .game-icon{
+	margin-left:20px;
+}
+.cspanel span.qq-title{
+	display:block;
+	font-size:16px;
+	font-weight:normal;
+	color:#ebebeb;
+	margin-top:10px;
+	margin-left:20px;
+}
+
+.cspanel span.qq-number{
+    display:block;
+    margin-left:20px;
+    margin-top:3px;
+}
+
+.cspanel span.qq-number a{
+	color:#F7941D;
+	text-decoration: none;
+	font-size:12px;
+}
+
+.cspanel span.email-title{
+	display:block;
+	font-size:16px;
+	font-weight:normal;
+	color:#ebebeb;
+	margin-top:10px;
+	margin-left:16px;
+}
+
+.cspanel span.email-number{
+    display:block;
+    margin-left:16px;
+    margin-top:3px;
+}
+
+.cspanel span.email-number a{
+	color:#F7941D;
+	text-decoration: none;
+	font-size:12px;
+}
+
+.cspanel span.game-title{
+	display:block;
+	font-size:16px;
+	font-weight:normal;
+	color:#ebebeb;
+	margin-top:10px;
+	margin-left:18px;
+}
+
+.cspanel span.game-number{
+	display:block;
+    margin-left:18px;
+    margin-top:3px;
+}
+
+.cspanel span.game-number a{
+	color:#F7941D;
+	text-decoration: none;
+	font-size:12px;
+}
+
+/* This is exclusive for IE6 Only */
+
+.registerTable .first{
+	text-align:right;
+	margin-right:10px;
+	font-weight:bold;
+	font-size:12px;
+	padding-right:10px;
+}
+.regCheckBox,
+.regTopButton,
+.regBottomButton {
+	margin-left: 210px;
+	margin-bottom: 10px;
+}
+.checkboxLabel{
+	font-size:12px;
+	color:#191919;
+	vertical-align:2%;
+}
+
+.registerTable label {
+	text-align:right;
+}
+
+.subImg{
+	margin-top:-3px;	
+}

@@ -1,0 +1,2069 @@
+/*
+	Name: Tianlong Poker EA
+	Date Created: 9/27/2013 11:32 AM
+	Author: Jose Nino N. Garcia
+*/
+
+/* CSS RESET */
+
+html, body, h1, h2, h3,h4, h5, h6,
+p, span, div, b, u, i, strong, ul, li, 
+table, tr, td, hr, label{
+	padding:0;
+	margin:0;
+}
+
+html, body{
+	background:#262626;
+	font-size:11px;
+	color:#21211F;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	height:auto;
+}
+
+.clear{
+	clear:both;
+}
+
+img{
+	border:none;
+}
+
+/* BEGIN */
+
+#sitewrapper{
+	width:100%;
+	position: relative;
+}
+
+.siteheader{
+	background-image:url(../../images/bg2.jpg);
+	background-repeat: repeat-x;
+	height:162px;
+	width:100%;
+}
+
+.mainbody{
+	width:100%;
+}
+
+.watermark{
+	background-image:url(../../images/watermark.jpg);
+	height:781px;
+	width:100%;
+	top:158px;
+	background-position:center center;
+	background-repeat: no-repeat;
+	position: absolute;
+
+}
+
+.content{
+	width:980px;
+	margin:0 auto;
+	z-index:900;
+}
+
+.headercontainer{
+	width:980px;
+	margin:0 auto;
+}
+
+.mainheader{
+	background-image:url(../../images/headerbackground.png);
+	height:120px;
+	width:980px;
+}
+
+.leftmainheader{
+	float:left;
+	padding-top:25px;
+}
+
+.leftmainheader img{
+	cursor: pointer;
+}
+
+.rightmainheader{
+	float:right;
+	width:500px;
+}
+
+.scoretag{
+	float:left;
+	margin-top:10px;
+}
+
+.firsttagbox{
+	float:right;
+}
+
+span.labeltop{
+	display:block;
+	background:url(../../images/onlineBG-mid.jpg) repeat-x;
+	height:26px;
+	width:59px;
+	color:#b1b1b1;
+	font-weight:bolder;
+	font-size:11px;
+	border-bottom: 1px solid #131313;
+	border-left: 1px solid #373737;
+	border-top: 1px solid #131313;
+	text-align: center;
+	line-height: 25px;
+	float:left;
+}
+
+span.amountboard{
+	display:block;
+	background:url(../../images/onlineBG-mid2.jpg) repeat-x;
+	height:26px;
+	width:109px;
+	text-align: center;
+	float:left;
+	border-bottom: 1px solid #131313;
+	border-right: 1px solid #373737;
+	border-top: 1px solid #131313;
+	color:#b1b1b1;
+	line-height: 25px;
+}
+
+span.amount{
+	color:#cc0000 !important;
+	font-size: 12px;
+	font-weight: bolder;
+}
+
+.lang{
+	background-color:#292929;
+	float:left;
+	margin-top:10px;
+	margin-left:5px;
+	height:25px;
+	width:76px;
+	border:1px solid #606060;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius: 6px;
+}
+
+.lang p{
+	margin:0;
+	padding:0;
+	line-height: 25px;
+	text-align: center;
+	color:#999999;
+}
+
+.secondtagbox{
+	float:right;
+	margin-top:20px;
+	margin-right:-10px;
+}
+
+.secondtagbox ul{
+	margin:0;
+	padding:0;
+	list-style: none;
+}
+
+.secondtagbox ul li{
+	float:left;
+	padding-right:10px;
+	padding-left:10px;
+	border-right: dotted 1px #666;
+}
+
+.secondtagbox ul li a{
+	color:#ffffff;
+	text-decoration: none;
+	font-size:13px;
+}
+
+.secondtagbox ul li.laststb{
+	border:none;
+}
+
+.thirdtagbox{
+	float:right;
+	margin-top:10px;
+}
+.txtfieldcont{
+	background-image:url(../../images/txtfield.png);
+	height:25px;
+	width:134px;
+	float:left;
+	margin-right:20px;
+}
+
+input.txtfields{
+	background:none;
+	padding:0;
+
+}
+
+input.txtfields{
+	float:left;
+	margin-right:10px;
+	background:url(../../images/txtfield.png);
+	background-repeat:no-repeat;
+	height:24px;
+	width:126px;
+	border:none;
+	color:#000000;
+	padding: 0 3px 2px 5px;
+	font-size: 12px;
+	line-height:26px;
+}
+
+input.txtfields::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #000000;
+}
+input.txtfields:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #000000;
+}
+input.txtfields::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #000000;
+}
+input.txtfields:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #000000;
+}
+
+.btnlogin{
+	float:left;
+	background-color:#c50d00;
+	border:none;
+	-moz-border-radius: 5px; /* Firefox */
+    -webkit-border-radius: 5px; /* Safari and Chrome */
+    border-radius: 5px; /* Opera 10.5+, future browsers, and now also Internet Explorer 6+ using IE-CSS3 */
+    padding:5px;
+    behavior:url(ie-css.htc); /* hack */
+    color:#ffffff;
+    height:24px;
+    width:40px;
+}
+
+a.labelfirst{
+	display: block;
+	color:#FFB209;
+	font-size: 14px;
+	text-decoration: none;
+	font-weight: bolder;
+	margin-left:10px;
+	margin-top:5px;
+	float:left;
+}
+
+a.labelsecond{
+	color:#a1a1a1;
+	display:block;
+	font-size:12px;
+	float:left;
+	margin-left:10px;
+	margin-top:5px;
+	text-decoration: none;
+}
+
+a:hover.labelsecond{
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+/* NAVIGATION */
+
+.navigation{
+	margin-top:2px;
+}
+
+.navigation ul{
+	margin:0;
+	padding:0;
+	list-style: none;
+	width:100%;
+}
+
+.navigation ul li{
+	float:left;
+	display: block;
+	padding-right:23px;
+	height:30px;
+	border-left:1px solid #404040;
+	padding-left:23px;
+	line-height: 30px;
+	padding-top:2px;
+}
+
+.navigation ul li:hover{
+	background:url(../../images/mainNavActive.png) repeat-x;
+	padding-right:23px;
+	padding-left:23px;
+	width:auto;
+}
+
+.navigation ul li a{
+	text-decoration: none;
+	color:#aeb5bd;
+	font-size: 13px;
+	font-weight:bold;
+}
+
+.navigation ul li a:hover{
+	color:#FFB209;
+}
+
+a.home{
+	display: block;
+	background:url(../../images/tianlongHome.png) no-repeat;
+	height:15px;
+	width:18px;
+	margin-top:6px;
+}
+
+a:hover.home{
+	background:url(../../images/tianlongHomehover.png) no-repeat;
+	height:15px;
+	width:18px;
+}
+
+.marqueeHolder {
+	float: left;
+	width: 980px;
+	height:auto;
+	margin:5px 0px;
+}
+
+.marquee {
+	background:url(../../images/marquee.jpg) no-repeat;
+	height: 30px;
+	width: 96px;
+	float: left;
+}
+.marqueeBody {
+	background:url(../../images/marqueebody.jpg) repeat-x;
+	height: 21px;
+	width: 865px;
+	float: left;
+	padding: 9px 8px 0 8px;
+}
+
+.marqueeBody p {
+	font-family: "microsoft yahei";
+	color: #FFB209;
+	font-size: 12px;
+}
+
+.headerBody{
+	width:890px;
+	height:65px;
+	background:url(../../images/headerBody.jpg) no-repeat;
+	padding:20px 0px 17px 90px;
+}
+.headerBodyLeft h1{
+	color:#fff;
+	font-size:30px;
+	line-height:40px;
+}
+
+.headerBodyLeft h4{
+	color:#fff;
+	font-size:15px;
+}
+.headerBodyLeft{
+	float:left;
+}
+.headerBodyRight{
+	float:right;
+	margin-right:30px;
+	margin-top:5px;
+}
+.headerBodyRight a#registerButton{
+	display:block;
+	width:220px;
+	height:58px;
+	background:url(../../images/registrationButton.png) no-repeat;
+}
+
+.pagecontainer{
+	background-color:#ffffff;
+	width:auto;
+	padding:10px;
+	position: relative;
+}
+
+.wrapperFooter {
+	clear: both;
+	float: left;
+	width: 980px;
+	height: auto;
+	background-color: #000;
+}
+
+.footerTop {
+	width: 983px;
+	height: 75px;
+	border-bottom: 1px solid #252525;
+}
+
+.footerTop img {
+	float: left;
+	margin: 13px 0 0 10px;
+	border:0;
+}
+
+.footerTop .footerTopLink {
+	float: left;
+	color: #666666;
+	font-size: 12px;
+	font-weight: bold;
+	cursor: pointer;
+	margin: 30px 0 0 25px;
+}
+
+.footerDownload {
+	background:url(../../images/freeDL.png) no-repeat;
+	width: 157px;
+	height: 21px;
+	float: left;
+	cursor: pointer;
+	margin: 20px 0 0 32px;
+	padding: 5px;
+	text-align: center;
+	font-family: microsoft yahei, Arial;
+	font-size: 18px;
+	font-weight: bold;
+	color: #d7d7d7;
+	letter-spacing:3px;
+}
+.footerTop a{ color:#FFFFFF; text-decoration:none;}
+.footerDownload:hover {
+	background:url(../../images/freeDLHover.png) no-repeat;
+	cursor: pointer;
+	color: #ffffff;
+}
+
+.footerBottom {
+	float: left;
+	width: 973px;
+	padding: 5px;
+}
+
+.footerBottom p {
+	margin-top: 8px;
+	margin-bottom: 8px;
+	float: left;
+	width: 400px;
+	height: auto;
+	color: #4a4a4a;
+	text-align: justify;
+	line-height:15px;
+	margin-left:15px;
+}
+
+.footerBottom .footerLogos {
+	float: right;
+	margin-right:10px;
+	margin-top:10px;
+}
+
+.footerBottom img {
+	float: left;
+	margin-left: 8px;
+}
+
+.smallBanner{
+	width:706px;
+	height:228px;
+	float:left;
+}
+
+.pagecontainer .rightPanel {
+	float: right;
+	background-color: #121212;
+	width: 239px;
+	height: 220px;
+	padding: 4px;
+}
+
+.pagecontainer .rightPanel .rightPanelContent {
+	background-color: #0e0e0e;
+	border: 1px solid #000000;
+	padding: 3px 5px 3px 5px;
+}
+
+.pagecontainer .rightPanel .rightPanelContent img {
+	vertical-align: -40%;
+	margin-right: 5px;
+}
+
+.pagecontainer .rightPanel .rightPanelContent h5 {
+	display: inline;
+	font-family: microsoft yahei;
+	font-size: 13px;
+	color: #fff;
+}
+.rightPanelContent h5 a{ color: #FFFFFF; text-decoration:none;}
+
+.pagecontainer .rightPanel .rightPanelUL {
+	padding: 3px;
+	border-top: none;
+	border-bottom: none;
+}
+.rightPanelUL li a{ text-decoration:none; color:#FFF;}
+
+.pagecontainer .rightPanel .rightPanelUL2 {
+	height: 94px;
+	padding: 3px;
+	border-top: none;
+}
+
+.rightPanelUL2 li a{ text-decoration:none; color:#FFF;}
+.pagecontainer .rightPanel  ul {
+	font-family: microsoft yahei;
+	font-size: 12px;
+	color: #979797;
+	margin-left: 20px;
+}
+
+.pagecontainer .rightPanel  ul li {
+	line-height: 26px;
+}
+
+.pagecontainer .miniBanners .miniBannerLeft {
+	float: left;
+	margin: 10px 10px 0 0;
+}
+
+.pagecontainer .miniBanners .miniBannerRight {
+	float: left;
+	margin: 10px 0 0 10px;
+}
+
+.pagecontainer .miniBanners .miniBannerLeft {
+	float: left;
+	margin: 10px 10px 0 0;
+}
+
+.pagecontainer .miniBanners .miniBannerRight {
+	float: left;
+	margin: 10px 0 0 18px;
+}
+
+/* TAB PANELS */
+
+.tabpanels{
+	float:left;
+	background-color:#101010;
+	height:293px;
+	position:relative;
+	width:706px;
+	margin-top:5px;
+}
+
+.chatpanels{
+	float:left;
+	margin-left:10px;
+	margin-top:5px;
+	width:244px;
+	height:293px;
+	background-color: #000000;
+}
+
+.tabtop{
+	width:auto;
+	background-color:#000000;
+	border-bottom:1px solid #272727;
+}
+
+.tabtop ul{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+.tabtop ul li{
+	float:left;
+	font-size:16px;
+	color:#ffffff;
+	padding:10px;
+	margin-left:50px;
+	font-family: microsoft yahei;
+	padding-right:40px;
+	border-right:1px solid #272727;
+}
+
+.tinybanners{
+	margin-left:40px;
+	height:114px;
+}
+
+.TB_images{
+	float:left;
+	margin-top:10px;
+	margin-right:20px;
+}
+
+.chatpanels h4{
+	text-align:center;
+	color:#ffffff;
+	line-height: 2em;
+	font-size: 20px;
+	margin-bottom:-2px;
+}
+
+.labelcontainer{
+	background-color:#313131;
+	width:244px;
+	height:51px;
+	border-bottom:#4a4a4a solid 1px;
+}
+
+.qq-icon, .email-icon, .game-icon, .qq-content, .email-content, .game-content{
+	float:left;
+}
+
+.qq-icon, .email-icon, .game-icon{
+	margin-top:20px;
+}
+
+.qq-icon{
+	margin-left:20px;
+}
+
+.email-icon{
+	margin-left:18px;
+}
+
+.game-icon{
+	margin-left:20px;
+}
+
+span.qq-title{
+	display:block;
+	font-size:16px;
+	font-weight:normal;
+	color:#ebebeb;
+	margin-top:10px;
+	margin-left:20px;
+}
+
+span.qq-number{
+    display:block;
+    margin-left:20px;
+    margin-top:3px;
+}
+
+span.qq-number a{
+	color:#F7941D;
+	text-decoration: none;
+	font-size:12px;
+}
+
+span.email-title{
+	display:block;
+	font-size:16px;
+	font-weight:normal;
+	color:#ebebeb;
+	margin-top:10px;
+	margin-left:16px;
+}
+
+span.email-number{
+    display:block;
+    margin-left:16px;
+    margin-top:3px;
+}
+
+span.email-number a{
+	color:#F7941D;
+	text-decoration: none;
+	font-size:12px;
+}
+
+span.game-title{
+	display:block;
+	font-size:16px;
+	font-weight:normal;
+	color:#ebebeb;
+	margin-top:10px;
+	margin-left:18px;
+}
+
+span.game-number{
+	display:block;
+    margin-left:18px;
+    margin-top:3px;
+}
+
+span.game-number a{
+	color:#F7941D;
+	text-decoration: none;
+	font-size:12px;
+}
+
+/* THIS IS THE CSS OF MEMBER CENTER */
+
+.memberCenterContainer{
+	width:943px;
+	height:auto;
+	background:#FFF;
+	padding:13px;
+}
+
+.memberCenterLeftPanel{
+	width:180px;
+	height: auto;
+	float:left;
+	background:#e3e3e3;
+	margin-right:20px;
+}
+.memberCenterRightPanel{
+	width:736px;
+	height: auto;
+	float:left;
+	background:#fff;
+
+}
+.sideBarTitle {
+	display: inline-block;
+	width:170px;
+	height:20px;
+	background:#060606;
+	padding:10px 0px 10px 10px;
+}
+
+.sideBarTitle a:link {
+	text-decoration: none;
+	color: #fff;
+}
+
+.sideBarTitle a:hover {
+	text-decoration: none;
+	color: #fff;
+}
+
+.sideBarTitle a:active {
+	text-decoration: none;
+	color: #fff;
+}
+
+.sideBarTitle a:visited {
+	text-decoration: none;
+	color: #fff;
+}
+
+.sideBarTitle h1{
+	font-size:15px;
+	color:#ffffff;
+	line-height:18px;
+}
+.sideBarBody{
+	width:100%;
+	height:auto;
+}
+.sideBarBody ul{
+	list-style:none;
+}
+.sideBarBody ul li{
+	display:block;
+	height:29px;
+	border-bottom:1px solid #bebebe;
+	font-size:15px;
+	color:#000;
+	font-weight:bold;
+	padding-left:10px;
+	padding-top: 10px;
+	cursor: pointer;
+}
+.sideBarBody ul li:hover{
+	display:block;
+	background-color:#c4c4c4;
+	border-bottom: 1px solid #8a8a8a;
+}
+.sideBarBody ul .activeMenu {
+	background-color:#c4c4c4;
+	border-bottom: 1px solid #8a8a8a;	
+}
+
+.sideBarBody ul li a:link {
+	text-decoration: none;
+	color: #000;
+    display:inline-block;
+    overflow:hidden;
+    white-space:nowrap;
+	width: 170px;
+	height: 28px;	
+}
+.sideBarBody ul li a:hover {
+	text-decoration: none;
+    display:inline-block;
+    overflow:hidden;
+    white-space:nowrap;
+	width: 170px;	
+	height: 28px;
+	background-color:#c4c4c4;
+}
+.sideBarBody ul li a:active {
+    display:inline-block;
+    overflow:hidden;
+    white-space:nowrap;
+	width: 170px;
+	height: 28px;
+	background-color:#c4c4c4;
+	text-decoration: none;
+	color: #000;
+}
+.sideBarBody ul li a:visited {
+	text-decoration: none;
+	color: #000;
+}
+
+
+/* --------- EDIT YOUR INFO CSS --------*/
+
+.memberCenterRightPanel .memberCenterEditInfo {
+	margin: 0 auto;
+	padding: 10px;
+	position: relative;
+}
+
+.memberCenterRightPanel .memberCenterEditInfo ul#editInfo {
+	height: 2em;
+    list-style: none;
+    margin: 0;
+    padding: 0;	
+}
+
+.memberCenterRightPanel .memberCenterEditInfo ul#editInfo li {
+	background-color: #dadada;
+    float: left;
+    margin: 0 1px 0 0;
+    padding-left: 10px;
+	color: #000;	
+	font-family: microsoft yahei;
+	font-size: 16px;
+	font-weight: normal;
+	border: 1px solid #adadad;
+	border-bottom: none;	
+	display: inline-block;
+}
+
+.memberCenterRightPanel .memberCenterEditInfo ul#editInfo a {
+	background-color: #dadada;
+    color: #008;
+    float: left;
+    line-height: 2em;
+    padding-right: 10px;
+    text-decoration: none;
+	color: #000;
+	display: inline-block;
+}
+
+.memberCenterRightPanel .memberCenterEditInfo ul#editInfo li.activeTab {
+	background-color: #fff;
+	color: #000;
+	border: 1px solid #455472;
+	border-bottom: 1px solid #fff;
+}
+
+.memberCenterRightPanel .memberCenterEditInfo ul#editInfo li.activeTab  a{
+	background-color: #fff;
+	color: #000;
+	border-bottom: 0px solid #fff;
+}
+
+
+.memberCenterRightPanel .memberCenterEditInfo  .editInfoContent {
+    clear: left;
+    padding: 1em;
+	background-color: #fff;
+	border-top: 1px solid #455472;
+}
+
+.editInfoContent tr td {
+	padding-left: 15px;
+}
+
+.editInfoContent tr td h4 {
+	font-family: microsoft yahei;
+	font-size: 13px;
+	letter-spacing: 2px;
+	font-weight: bold;
+	line-height:20px;
+}
+
+.editInfoContent tr td h3 {
+	font-family: microsoft yahei;
+	font-size: 16px;
+	letter-spacing: 2px;
+	font-weight: bold;
+	line-height:24px;	
+}
+
+.editInfoContent tr td .InfoTextField{
+	width: 250px;
+	height: 15px;
+	padding: 3px;
+	font-family: microsoft yahei, verdana;
+	font-size: 11px;
+
+}
+
+.editInfoContent .editInfoSecond tr td .InfoTextFieldLong {
+	width: 530px;
+	height: 15px;
+	padding: 3px;
+	font-family: microsoft yahei, verdana;
+	font-size: 11px;
+}
+
+.editInfoContent tr td .InfoTextField:focus {
+	outline: none;
+}
+
+.editInfoContent tr td select {
+	border:1px solid #CCC; 
+	color:#666; 
+	font-size:14px; 
+	padding:4px; 
+	margin:0; 
+	width: 80px;
+}
+
+.editInfoContent tr td .gender {
+	border:1px solid #CCC; 
+	color:#666; 
+	font-size:14px; 
+	padding:4px; 
+	width: 260px;
+	float: left;
+}
+
+.editInfoContent tr td .country {
+	border:1px solid #CCC; 
+	color:#666; 
+	font-size:14px; 
+	padding:4px; 
+	margin:0; 
+	width: 260px;
+}
+
+.MCaccountTransferRight .account {
+	border:1px solid #CCC; 
+	color:#666; 
+	font-size:14px; 
+	padding:4px; 
+	margin:0; 
+	width: 170px;
+}
+
+.MCaccountTransferRight .accountTxt {
+	border:1px solid #CCC; 
+	color:#666; 
+	font-size:14px; 
+	padding:4px; 
+	margin:0; 
+	width: 160px;
+}
+
+.editInfoContent tr td .check {
+	float: left;
+}
+
+.editInfoContent tr td p {
+	font-family: microsoft yahei;
+	font-size: 11px;
+	line-height: 12px;
+	margin-top: 3px;
+}
+
+.editInfoContent .editInfoButton {
+	background:url('../../images/editInfoButton.png') no-repeat;
+	width: 188px;
+	height: 35px;
+	font-family: microsoft yahei;
+	font-size: 24px;
+	font-weight: normal;
+	color: #fff;
+	text-align: center;
+	padding-top: 5px;
+	cursor: pointer;
+}
+
+.editInfoContent .editInfoButton:hover {
+	background:url('../../images/editInfoButton.png') no-repeat;
+	background-position: 0 -40px;
+	color: #ff9c00;
+}
+
+.editInfoCrumbs {
+	float: right;
+	font-family: SimSun, microsoft yahei;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000;
+	margin-top: -10px;
+}
+
+.editInfoCrumbsDeposit {
+	float: right;
+	font-family: SimSun, microsoft yahei;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000;
+	margin-top: -27px;
+}
+
+
+/* ------ DEPOSIT WITHRAW HISTORY CSS ------ */
+
+.editInfoContent .datePick {
+	background:url('../../images/calendar.png') no-repeat;
+	width: 150px;
+	height:16px;	
+	border:none;
+	padding: 5px;
+	font-family: verdana;
+	color: #949494;
+	font-size: 11px;
+	margin: 7px 0 0 0;
+}
+
+.editInfoContent .datePick:focus {
+	outline:none;
+}
+
+.editInfoContent .depositdrawalHistoryCont h4 {
+	font-family: microsoft yahei;
+	font-size: 16px;
+	color: #000;
+	line-height: 20px;
+}
+
+.editInfoContent .depositdrawalHistoryCont .redButton {
+	background:url('../../images/depositdrawalRedButton.png') no-repeat;
+	width:62px;
+	height:26px;
+	border:none;
+	color: #fff;
+	cursor:pointer;
+}
+
+.editInfoContent .depositdrawalHistoryCont .redButton:hover {
+	background:url('../../images/depositdrawalRedButtonHover.png') no-repeat;
+}
+
+.editInfoContent .depositdrawalHistoryCont ul {
+	list-style:none;
+	margin-bottom:15px;
+}
+.editInfoContent .depositdrawalHistoryCont ul li {
+	display:inline-block;
+}
+
+.editInfoContent .depositdrawalHistoryCont .depositdrawalHeader {
+	background:url('../../images/depositdrawalHeader.jpg') repeat-x;
+	width:695px;
+	height:39px;
+	color: #fff;
+	font-size: 13px;
+	float:left;
+}
+
+.editInfoContent .depositdrawalHistoryCont .depositdrawalHeader td {
+	padding-right:50px;
+	padding-left: 22px;
+	padding-top:10px;
+}
+
+.editInfoContent .depositdrawalHistoryCont .depositdrawalTable  {
+	border: 1px solid #c6c4d9;
+}
+
+
+.editInfoContent .depositdrawalHistoryCont .depositdrawalPagination {
+	margin-left: 87%;
+	display:inline;
+}
+
+.editInfoContent .depositdrawalHistoryCont .depositdrawalPagination p {
+	display:inline;
+}
+
+.depositdrawalBar .depositdrawalBarList {
+	width:230px;
+	height:17px;
+	background-color:#7f7f7f;
+	color:#fff;
+	line-height: 12px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.depositdrawalBar .depositdrawalBarList tr td {
+	width: 40px;
+	padding-top: 5px;
+	padding-bottom:8px;
+	padding-left: 10px;
+	padding-right:5px;
+}
+
+.depositdrawalBar .depositdrawalBarList tr td:last-child {
+	width: 60px;
+}
+
+.depositdrawalBar .depositdrawalBarList .activeBar {
+	background-color:#dc0000;
+	color:#fff;
+}
+
+.depositdrawalBar .depositdrawalBarList a:link, a:active, a:hover, a:visited {
+	text-decoration: none;
+}
+
+/* ------- DEPOSIT PAGE CSS ------- */
+
+.MCdeposit h2 {
+	font-size: 30px;
+	font-family: simsun, microsoft yahei;
+	line-height: 32px;
+	display:inline;
+}
+
+.MCdeposit img {
+	display:inline;
+}
+
+.MCdeposit ul {
+	list-style:none;
+
+}
+.MCdeposit ul li {
+	display:inline;
+}
+
+.MCdeposit {
+	border-bottom: 1px solid #b6b6b6;
+}
+
+.MCdepositImageContainer {
+	margin: 0 auto;
+	padding: 0;
+	float: left;
+}
+
+.MCdepositImageWhole {
+	width: 122px;
+	margin-top: 10px;
+	float: left;
+	border: 1px solid #b1b1b0;	
+	padding: 0 0 0 30px;
+}
+
+.MCdepositImageWhole2 {
+	width: 122px;
+	margin-top: 10px;
+	float: left;
+	border: 1px solid #b1b1b0;	
+	padding: 0 0 0 30px;
+}
+
+.MCdepositImage {
+	background:url('../../images/depositVisa.png') no-repeat;
+	width: 94px;
+	height: 58px;
+	margin-top: 15px;
+	cursor: pointer;
+
+}
+
+.MCdepositImageWhole h5 {
+	color: #333333;
+	font-size: 23px;
+	font-family: microsoft yahei;
+	font-weight: normal;
+	line-height: 30px;
+}
+
+.MCdepositImageWhole2 h5 {
+	color: #333333;
+	font-size: 23px;
+	font-family: microsoft yahei;
+	font-weight: normal;
+}
+
+.MCdepositImage2 {
+	background:url('../../images/depositGoldImage.png') no-repeat;
+	width: 74px;
+	height: 69px;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+
+.MCdepositContent {
+	margin-top: 13px;
+	margin-left: 10px;
+	width: 550px;
+	float: left;
+}
+
+.MCdepositContent p {
+	text-align:justify;
+	line-height: 16px;
+	font-size: 12px;
+}
+
+.MCdepositContent  h4 {
+	font-size: 12px;
+	font-weight: bold;
+	font-family: simsun, microsoft yahei;
+	margin-top: 10px;
+	display:inline-block;
+}
+
+.MCdepositContent  h5 {
+	font-size: 12px;
+	font-weight: normal;
+	font-family: simsun, microsoft yahei;
+	margin-top: 3px;
+	display:inline;
+	color: #ff0000;
+}
+
+.MCdepositContent  h6 {
+	font-size: 12px;
+	font-weight: normal;
+	font-family: simsun, microsoft yahei;
+	margin-top: 3px;
+	display:inline;
+}
+
+/* --------- Account Transfers CSS page -------- */
+
+.MCaccountTransferPanel {
+	border-bottom: 1px solid #b6b6b6;
+}
+
+.MCaccountTransferPanel h2 {
+	font-size: 30px;
+	font-family: simsun, microsoft yahei;
+	line-height: 32px;
+	display:inline;
+}
+
+.MCaccountTransferPanel ul {
+	margin-top: 8px;
+}
+
+.MCaccountTransferPanel ul li {
+	list-style:none;
+	display:inline;
+}
+
+.MCaccountTransferLeft {
+	float: left;
+	width: 460px;
+}
+
+.MCaccountTransferLeft p {
+	width: 400px;
+	font-family: simsun, microsoft yahei;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 20px;
+	color: #6c6c6c;
+	margin-top: 10px;
+}
+
+.MCaccountTransferLeftContent {
+	background: #e1e0e0;
+	width: 400px;
+	height: 160px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	float: left;
+	margin-top: 10px;
+}
+
+
+.MCaccountTransferLeftContent .mcatlContFirst {
+	width: 90px;
+	float: left;
+}
+
+.MCaccountTransferLeftContent .mcatlContFirst li {
+	list-style: none;
+	font-family: simsun, microsoft yahei;
+	font-size: 16px;
+	color: #000;
+	line-height: 80px;
+	font-weight: bold;
+}
+
+.MCaccountTransferLeftContent .mcatlContFirst li p {
+	list-style: none;
+	font-family: simsun, microsoft yahei;
+	font-size: 16px;
+	color: #000;
+	line-height: 70px;
+	font-weight: bold;
+	border-bottom: 1px solid #999999;
+	width: 400px;
+}
+
+
+.greenArrow {
+	background:url('../../images/greenArrow.png') no-repeat;
+	width: 20px;
+	height: 16px;
+	float: right;
+	margin-top: -40px;
+}
+
+.redArrow {
+	background:url('../../images/redArrow.png') no-repeat;
+	width: 20px;
+	height: 16px;
+	float: right;
+	margin-top: -40px;	
+}
+
+
+.MCaccountTransferLeftContent .mcatlContSecond {
+	width: 160px;
+	float: right;
+	list-style:none;
+	color: #ff0000;
+	font-size: 22px;
+	font-family: simsun;
+	font-weight: bold;
+}
+ 
+.MCaccountTransferLeftContent .mcatlContSecond li {
+	color: #ff0000;
+	font-size: 24px;
+	font-family: simsun;
+	font-weight: bold;
+	line-height: 70px;
+	float: left;
+}
+ 
+.MCaccountTransferLeftContent .mcatlContThird {
+	width: 150px;
+	margin-right: 10px;
+	float: left;
+	list-style:none;
+	color: #ff0000;
+	font-family: simsun;
+	font-weight: bold;
+}
+
+.MCaccountTransferLeftContent .mcatlContThird li {
+	margin-right: 10px;
+	color: #ff0000;
+	font-size: 18px;
+	font-family: simsun;
+	font-weight: bold;
+	text-align: right;
+	line-height: 35px;
+}
+ 
+.MCaccountTransferRight {
+	margin-top: 40px;
+	width: 250px;
+	height: auto;
+	float: right;
+	background-color:#dcdbdb;
+}
+
+.MCaccountTransferRight h4 {
+	font-family: simsun, microsoft yahei;
+	background-color:#191919;
+	font-weight: normal;
+	font-size: 16px;
+	color: #fff;
+	line-height: 34px;
+	padding-left: 10px;
+}
+
+.MCaccountTransferRight table {
+	margin-left: 8px;
+}
+
+.MCaccountTransferRight table tr td{
+	font-size: 12px;
+	text-align: right;
+}
+
+.MCaccountTransferRight .editTransferButton {
+	background:url('../../images/editInfoButton2-1.png') no-repeat;
+	width: 130px;
+	height: 25px;
+	font-family: microsoft yahei;
+	font-size: 18px;
+	font-weight: normal;
+	color: #fff;
+	text-align: center;
+	padding-top: 5px;
+	cursor: pointer;
+	margin-left: 53px;
+	margin-top: 2px;
+}
+
+
+.MCaccountTransferRight .editInfoButton {
+	background:url('../../images/editInfoButton2.png') no-repeat;
+	width: 130px;
+	height: 25px;
+	font-family: microsoft yahei;
+	font-size: 18px;
+	font-weight: normal;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+	margin-left: 53px;
+}
+
+.MCaccountTransferRight .editInfoButton:hover {
+	background:url('../../images/editInfoButton2.png') no-repeat;
+	background-position: 0 -30px;
+	color: #ff9c00;
+}
+
+.MCaccountTransferBottom {
+	margin-top: 10px;
+	width: 696px;
+	height: auto;
+	float: left;
+	background-color:#dcdbdb;	
+	padding: 20px 0 20px 20px; 
+}
+
+.MCaccountTransferBottom h4 {
+	font-size: 17px;
+	color: #000;
+	font-family: simsun, microsoft yahei;
+	margin-left: 16px;
+}
+
+.MCaccountTransferBottom ol {
+	font-size: 12px;
+	color: #000;
+	font-family: simsun, microsoft yahei;
+}
+
+.MCaccountTransferBottom ol li {
+	line-height: 24px;
+}
+
+.MCaccountTransferBottom p {
+	margin-left: 30px;
+	color: #6e6e6e;
+	line-height: 24px;
+	font-size: 12px;
+	font-family: simsun, microsoft yahei;	
+}
+
+/* --------- withdrawal details page ---------- */
+
+.MCwithdrawDetailsPanel {
+	margin-top: 5px;
+	border-bottom: 1px solid #b6b6b6;
+}
+
+
+.MCwithdrawDetailsPanel h3 {
+	font-family: simsun, microsoft yahei;
+	font-size: 30px;
+	float: left;
+}
+
+.MCwithdrawDetailsPanel ul li {
+	list-style:none;
+}
+
+.MCwithdrawDetails table {
+	float: left;
+	margin-top: 10px;
+}
+
+.MCwithdrawDetails table tr td {
+	font-size: 14px;
+	color: #000;
+	line-height: 30px;
+}	
+
+.MCwithdrawDetails table tr .smallFont {
+	font-size: 12px;
+}
+
+.MCwithdrawDetails table tr td .InfoTextField {
+	width: 200px;
+	height: 15px;
+	padding: 3px;
+	font-family: microsoft yahei, verdana;
+	font-size: 11px;
+}
+
+.MCwithdrawDetails table tr td .InfoTextFieldCaptcha {
+	background:url('../../images/fieldCaptcha.png') no-repeat;
+	width: 117px;
+	height: 25px;
+	font-family: microsoft yahei, verdana;
+	font-size: 11px;
+	border:none;
+	padding-left: 90px;
+	padding-right:3px;
+}
+
+.MCwithdrawDetails table tr td .InfoTextFieldCaptcha:focus {
+	outline:none;
+}
+
+.MCwithdrawDetails table tr td .InfoTextField:focus {
+	outline:none;
+}
+
+.MCwithdrawDetails table tr td .redStar {
+	color: #ff0000;
+}
+
+
+.MCwithdrawDetails .yourBank {
+	color:#666; 
+	font-size:14px; 
+	padding:4px; 
+	margin:0; 
+	width: 210px;
+}
+
+.MCwithdrawDetails a {
+	text-decoration: none;
+}
+
+.MCwithdrawDetails .editInfoButton {
+	background:url('../../images/editInfoButton3.png') no-repeat;
+	width: 100px;
+	height: 30px;
+	font-family: microsoft yahei;
+	font-size: 18px;
+	font-weight: normal;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+	margin-left: 83px;
+	margin-top: 2px;
+}
+
+.MCwithdrawDetails .editInfoButton:hover {
+	background:url('../../images/editInfoButton3.png') no-repeat;
+	background-position: 0 -30px;
+	color: #ff9c00;
+}
+
+.MCwithdrawDetailsRight {
+	float: right;
+	width: 180px;
+	height: auto;
+	padding: 10px;
+}
+
+.MCwithdrawDetailsRight h4 {
+	background-color: #030303;
+	color: #fff;
+	font-size: 14px;
+	font-family: simsun, microsoft yahei;
+	line-height: 30px;
+	font-weight: normal;
+	padding-left: 10px;
+}
+
+.MCwithdrawDetailsRight p {
+	padding: 5px 5px 5px 10px; 
+	background-color: #dee0e1;
+	color: #000;
+	font-size: 13px;
+	font-family: simsun, microsoft yahei;
+	line-height: 20px;
+}
+
+
+/* Success withraw CSS */
+
+.MCwithdrawSuccess {
+	margin-top: 40px;
+	margin-left: 50px;
+}
+
+.successCheck {
+	background:url('../../images/greenCheck.png') no-repeat;
+	width: 72px;
+	height: 76px;
+	float: left;
+	position: relative;
+	display: inline-block;
+
+}
+
+
+.MCwithdrawSuccess img {
+	float: left;
+}
+
+.MCwithdrawSuccess h4 {
+	color: #ff000e;
+	font-family: simsun, microsoft yahei;
+	font-size: 30px;
+	float: left;
+	margin-top: 20px;
+	margin-left: 10px;
+}
+
+.MCwithdrawSuccess p {
+	clear:both;
+	color: #000;
+	font-family: simsun, microsoft yahei;
+	font-size: 15px;
+	width: 550px;
+	line-height: 20px;
+	text-align:justify;
+	margin-left: 86px;
+}
+
+.MCwithdrawSuccess h5 {
+	color: #171717;
+	font-family: simsun, microsoft yahei;
+	font-size: 22px;
+	margin-left: 86px;
+	margin-top: 20px;
+}
+
+.MCwithdrawSuccess table {
+	margin-left: 86px;
+}
+
+.MCwithdrawSuccess table tr td{
+	font-size: 16px;
+	line-height: 25px;
+	font-family: simsun, microsoft yahei;
+	padding-right: 80px;
+}
+
+.blueText {
+	color: #0088cc;
+}
+
+.MCwithdrawSuccess table tr td .withdrawSuccessButton {
+	background:url('../../images/withdrawSuccessButton.png') no-repeat;
+	height: 25px;
+	width:117px;
+	padding: 13px 0 0 12px;
+	font-size: 13px;
+	color: #fff;
+	cursor: pointer;
+	display:inline-block;
+}
+
+.MCwithdrawSuccess table tr td .withdrawSuccessButton:hover {
+	background:url('../../images/withdrawSuccessButtonHover.png') no-repeat;
+}
+
+/* -------- deposit details css -------- */
+
+.MCdepositDetailsPanel {
+	border-bottom: 1px solid #b6b6b6;
+	border-bottom: 1px solid #b6b6b6;
+}
+
+.MCdepositDetailsPanel ul li {
+	list-style: none;
+}
+
+.MCdepositDetailsPanel img {
+	float: left;
+	margin-top: 10px;
+}
+
+.MCdepositDetailsPanel h3 {
+	font-family: simsun, microsoft yahei;
+	font-size: 30px;
+}
+
+.MCdepositDetailsPanel .CrumbsDeposit {
+	float: right;
+	font-family: SimSun, microsoft yahei;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000;
+	margin-top: -27px;
+}
+
+.MCdepositDetailsContent {
+	width: 400px;
+	float: left;
+}
+
+.MCdepositDetailsContent h3 {
+	color: #000;
+	font-family: simsun, microsoft yahei;
+	font-size: 25px;
+	float: left;
+	margin-top: 20px;
+}
+
+.MCdepositDetailsContent h4 {
+	color: #000;
+	font-family: simsun, microsoft yahei;
+	font-size: 16px;
+	float: left;
+	padding-right: 20px;
+}
+
+.MCdepositDetailsContent table {
+	margin: 20px 0 0 10px;;
+}
+
+.MCdepositDetailsContent table tr td .bank {
+	border:1px solid #CCC; 
+	color:#666; 
+	font-size:14px; 
+	padding:4px; 
+	margin:0; 
+	width: 260px;
+}
+
+.MCdepositDetailsContent table tr td .smallCaptcha {
+	background:url('../../images/fieldCaptchaSmall.png') no-repeat;
+	width:65px;
+	height: 31px;
+	font-family: microsoft yahei, verdana;
+	font-size: 12px;
+	border:none;
+	padding-left: 66px;
+	padding-right: 2px;
+}
+
+.MCdepositDetailsContent table tr td .smallCaptcha:focus {
+	outline:none;
+}
+
+.MCdepositDetailsContent a {
+	text-decoration: none;
+	colro: #fff;
+}
+
+.MCdepositDetailsContent table tr td .depositDetailsButton {
+	background:url('../../images/editInfoButton3.png') no-repeat;
+	width: 100px;
+	height: 25px;
+	font-family: microsoft yahei;
+	font-size: 18px;
+	font-weight: normal;
+	color: #fff;
+	text-align: center;
+	padding-top: 5px;
+	cursor: pointer;
+	margin-left: 109px;
+	margin-top: 2px;
+}
+
+.MCdepositDetailsContent table tr td .depositDetailsButton:hover {
+	background:url('../../images/editInfoButton3.png') no-repeat;
+	background-position: 0 -30px;
+	color: #ff9c00;
+}
+.MCdepositDetailsContent table tr td .depositDetailsButton a {
+	text-decoration: none;
+}
+
+
+.MCdepositDetailsRight {
+	float: right;
+	width: 153px;
+	height: auto;
+	padding: 10px;
+}
+
+.MCdepositDetailsRight h4 {
+	background-color: #030303;
+	color: #fff;
+	font-size: 14px;
+	font-family: simsun, microsoft yahei;
+	line-height: 30px;
+	font-weight: normal;
+	padding-left: 10px;
+}
+
+.MCdepositDetailsRight p {
+	padding: 5px 5px 5px 10px; 
+	background-color: #dee0e1;
+	color: #000;
+	font-size: 13px;
+	font-family: simsun, microsoft yahei;
+	line-height: 20px;
+	float: right;
+}
+
+.MCdepositDetailsRight .PC {
+	height: auto;
+	background-color: #dee0e1;	
+}
+
+.MCdepositDetailsContentNext {
+	width: 335px;
+	height: auto;
+	margin-top: 20px;
+	margin-left: 10px;
+	float: left;
+}
+
+.MCdepositDetailsContentNext table {
+	width: 250px;
+	height: auto;
+}
+
+.MCdepositDetailsContentNext table tr td{
+	font-size: 13px;
+	line-height: 25px;
+	font-family: simsun, microsoft yahei;
+}
+
+.MCdepositDetailsContentNext  h5 {
+	color: #171717;
+	font-family: simsun, microsoft yahei;
+	font-size: 22px;
+	margin-top: 20px;
+	float: left;
+}
+
+.MCdepositDetailsContentNext h3 {
+	color: #000;
+	font-family: simsun, microsoft yahei;
+	font-size: 25px;
+	float: left;
+	padding-right: 20px;	
+}
+
+.MCdepositDetailsContentNext p {
+	color: #000;
+	font-family: simsun, microsoft yahei;
+	font-size:12px;
+	padding-right: 20px;	
+	line-height: 20px;
+	float: left;
+}
+
+.MCdepositDetailsContentNext h2 {
+	font-size: 12px;
+	color: #ff0000;
+	font-weight: normal;
+	line-height: 20px;
+}
+
+.MCdepositDetailsContentNext .redText {
+	color: ff0000;
+	font-weight: normal;
+	font-size: 14px;
+}
+
+.MCdepositDetailsContentNext .depositNext {
+	background:url('../../images/editInfoButton2.png') no-repeat;
+	width: 130px;
+	height: 25px;
+	font-family: microsoft yahei;
+	font-size: 18px;
+	font-weight: normal;
+	color: #fff;
+	text-align: center;
+	padding-top: 5px;
+	cursor: pointer;
+	margin-top: 2px;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.MCdepositDetailsContentNext .depositNext:hover {
+	background:url('../../images/editInfoButton2.png') no-repeat;
+	background-position: 0 -30px;
+	color: #ff9c00;
+}
+
+
+.MCdepositDetailsRightNext {
+	float: right;
+	width: 223px;
+	height: auto;
+	background-color: #ebebeb;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+
+.MCdepositDetailsRightNext h4 {
+	background-color:#d5d5d5;
+	width: auto;
+	color: #ff0000;
+	font-size: 14px;
+	padding: 10px;
+}
+
+.MCdepositDetailsRightNext ol {
+	float:right;
+	color: #ff0000;
+}
+
+.MCdepositDetailsRightNext ol li {
+	line-height: 22px;
+	font-size: 12px;
+}
+
+.MCdepositDetailsRightNext ol li a .depositText {
+	text-decoration: none;
+	color: #000;
+	display:inline;
+}
+
+.MCdepositDetailsRightNext ol li .depositText2 {
+	display:inline;
+	color: #000;
+}
+
+
+/* -------- SIGNED IN CSS -------- */
+
+.userLog {
+	clear: both;
+	float: right;
+	margin-top:-3px;	
+}
+
+.userLog ul {
+	list-style: none;
+	font-family: microsoft yahei;
+	font-size: 12px;
+	color: #a8a8a8;
+}
+
+.userLog img {
+	vertical-align: -45%;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.userLog ul li {
+	display: inline;
+}
+
+.userLog ul li img {
+	vertical-align: -26%;
+	margin-right: -5px;
+}
+
+.userLog ul li a:link {
+	text-decoration: none;
+}
+
+.userLog .first {
+	background: url('../../images/loggedin box left.png') no-repeat;
+	height: 34px;
+	width: 9px;
+	float: left;
+}
+
+.userLog .blueText {
+	font-family: verdana;
+	font-size: 12px;
+	font-weight: bolder;
+	color: #0581d8;
+	margin-right: 15px;
+	cursor: pointer;
+}
+
+.userLog .blueText:hover {
+	color: #0062a6;
+}
+
+.userLog .redText {
+	font-family: microsoft yahei;
+	font-size: 12px;
+	font-weight: bolder;
+	color: #c70006;
+	margin: 0 5px 0 5px;
+}
+
+.userLog .redText:hover {
+	color: #ff0f16;
+	text-decoration: underline;
+}
+
+.userLog .goldText {
+	font-family: microsoft yahei;
+	font-size: 12px;
+	font-weight: bolder;
+	color: #ffa200;
+	margin: 0 5px 0 5px;
+}
+
+.userLog .goldText:hover {
+	color: #ffa200;
+	text-decoration: underline;
+}
+
+
+.userLog ul {
+	padding: 4px;
+	border-radius: 7px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	box-shadow: 0px 0px 13px #8d8d8d; 
+	height: 23px;
+	width: auto;
+}
+
+
+
+#selectionContainer {
+	margin: -5px 0 0 -1px;
+	width: 72px;
+	height: auto;
+	background-color: #292929;
+	color: #999999;
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	padding: 2px 0 2px 4px;
+	border:1px solid #606060;
+	border-top:none;
+	display: none;
+	position: absolute;
+	z-index:900;
+}
+
+ul#selectionContainer
+{
+     list-style-type:none;
+}
+
+#selectionContainer li {
+	line-height: 1.7em;
+	margin-right: 11px;
+	height:20px;
+	margin-top:4px;
+}
+
+#selectionContainer li a{
+	color: #999999;
+	text-decoration:none;
+	padding:2px 4px;
+	width:100%;
+
+}
+#selectionContainer li a:hover{
+	color: #fff;
+	background:#000;
+	padding:2px 4px;
+	text-decoration:none;
+}
+
+.lang p img
+{
+    cursor:pointer;
+}

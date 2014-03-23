@@ -1,0 +1,114 @@
+/* ================= BLOCK UI CSS ================= */
+
+#CS24Hours{
+	cursor: pointer;
+}
+
+#csWrapper {
+	background:url(../images/BlockUI/uiMainBG.png) repeat-x;
+	width: 736px;
+	height: 430px;
+	padding: 11px 7px 7px 7px;
+	display: none;
+	text-align: left;
+}
+
+.CS24Hours {
+	width: 730px;
+	height: 428px;
+	border: 3px solid #fff;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	background:url(../images/BlockUI/uiHeader.png) no-repeat;
+	width: 707px;
+	height:auto;
+	padding-left: 20px;
+	
+}
+
+.CS24Hours h4 {
+	padding-top: 8px;
+	font-size: 15px;
+	color: #fff;
+	font-weight: normal;
+	float: left;
+}
+
+.CS24Hours .buttonClose {
+	background:url(../images/BlockUI/Buttons.png) no-repeat;
+	background-position: -56px 0;
+	width: 40px;
+	height:14px;
+	float:right;
+	border: none;
+	cursor: pointer;
+}
+
+.CS24Hours .buttonClose:hover {
+	background:url(../images/BlockUI/ButtonsHover.png) no-repeat;
+	background-position: -56px 0;
+}
+
+.CS24Hours .uiButtons {
+	margin-right: 15px;
+}
+
+.CS24HoursInner .uiPanel {
+	margin-top: 65px;
+	width: 730px;
+	height: auto;
+}
+
+.CS24HoursInner .uiPanel .uiPanelFirst {
+	background:url(../images/BlockUI/uiContentBG.png) no-repeat;
+	width: 422px;
+	height: 61px;
+	padding: 8px 0 5px 15px;
+	margin-bottom: 15px;
+	z-index: 9;
+	position: relative;
+}
+
+.CS24HoursInner .uiPanel .uiPanelFirst img {
+	float: left;
+	margin-right: 10px;
+}
+
+.CS24HoursInner .uiPanel .uiPanelFirst h6 {
+	font-family: microsoft yahei;
+	font-size: 18px;
+	font-weight: normal;
+	color: #ffb350;
+	margin-top: 10px;
+}
+
+.CS24HoursInner .uiPanel .uiPanelFirst h5 {
+	font-family: arial;
+	font-size: 11px;
+	font-weight: normal;
+	color: #fff;
+	z-index: 9;	
+	display: inline;
+}
+
+.CS24HoursInner .uiPanel .uiPanelFirst p {
+	font-family: microsoft yahei;
+	font-size: 15px;
+	font-weight: normal;
+	color: #fff;
+	margin-top: 5px;	
+}
+
+
+.CS24HoursInner .uiPanel .uiPanelImage {
+	background:url(../images/BlockUI/woman.png) no-repeat;
+	width: 365px;
+	height:381px;
+	float: right;
+	margin-top: -25px;
+	margin-right: 23px;
+	z-index: 1;
+	position: relative;
+}
+

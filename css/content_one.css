@@ -1,0 +1,179 @@
+/*
+	Name: Tianlong Poker EA (NOT IE)
+	Date Created: 9/27/2013 11:32 AM
+	Author: Jose Nino N. Garcia
+*/
+
+/*============================= CONTAINER  =============================*/
+
+.RightFormContainer
+{
+		
+}
+
+.RFCContainer
+{
+		
+}
+
+.tabsTitleUI
+{
+	border-bottom:1px solid #455472;
+}
+
+.tabsLeftPportion
+{
+	margin:0;
+	padding:0;
+	list-style:none;	
+	float:left;
+}
+
+.tabsLeftPportion li
+{
+	float:left;
+	margin-right:2px;	
+}
+
+a.tblpH
+{
+	display:block;	
+	padding:7px;
+	border-top:1px solid #455472;
+	border-left:1px solid #455472;
+	border-right:1px solid #455472;
+	width:80px;
+	text-align:center;
+	font-weight:bold;
+	text-decoration:none;
+	color:#000000;
+	background:#ececec;
+}
+
+a.currentTab
+{
+	background-color:#cccccc !important;
+}
+
+.tabsRightPortion
+{
+	float:right;	
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+
+.tabsRightPortion li
+{
+	float:left;
+	margin-left:5px;
+	padding-top:10px;	
+}
+
+.tabsRightPortion li a
+{
+	font-size:12px;
+	text-decoration:none;
+	color:#000000;	
+}
+
+.accountStatContainer
+{
+	padding:10px;
+	width:708px;
+	border:1px solid #acacac;
+	margin-top:10px;
+	background:#e2e2e2;	
+}
+
+.accountStatContainer h3
+{
+	color:#000000;
+	font-size:16px;	
+}
+
+.firstTabPort
+{
+	text-align:center;	
+	border-top:1px solid #aea2a2;
+	border-left:1px solid #aea2a2;
+	border-right:1px solid #aea2a2;
+	margin-top:10px;
+	background:url('../images/accStatus-Top.png');
+}
+
+.firstTabPort p
+{
+	color:#000000;	
+	font-weight:bold;
+	font-size:12px;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+.firstTabPort span.colorRed
+{
+	color:#ff0710;	
+}
+
+.dataTableList th.dtlLeftForm
+{
+	background-image:url('../images/accStatus-left.png');
+	height:38px;
+	width:16px;
+	background-repeat:no-repeat;
+}
+
+.dataTableList th.dtlRightForm
+{
+	background-image:url('../images/accStatus-right.png');
+	height:38px;
+	width:16px;
+	background-repeat:no-repeat;
+}
+
+.dataTableList th
+{
+	background-image:url('../images/accStatus-mid.png');
+	height:38px;	
+	line-height:30px;
+}
+
+.dataTableList th label
+{		
+	color:#ffffff;
+}
+
+.dataTableList td
+{
+	background-image:url('../images/accStatusRow-mid.png');
+	height:29px;
+	text-align:center;
+	color:#ffffff;	
+	font-weight:bold;
+}
+
+.dataTableList td.dtsf
+{
+	background-image:url('../images/accStatusRow-left.png');
+	width:16px;
+	height:29px;
+}
+
+.dataTableList td.dtsg
+{
+	background-image:url('../images/accStatusRow-right.png');
+	width:16px;
+	height:29px;
+}
+
+span.redMid
+{
+	color:#ff0000;
+}
+
+td.sIvad
+{
+	border-left:1px dashed #696969;
+	border-right:1px dashed #696969;	
+}

@@ -1,0 +1,147 @@
+/*
+	Name: Tianlong Poker EA (NOT IE)
+	Date Created: 9/27/2013 11:32 AM
+	Author: Jose Nino N. Garcia
+*/
+
+/*============================= CONTAINER  =============================*/
+
+.RightFormContainer
+{
+	
+}
+
+.RFCContainer
+{
+		
+}
+
+.tabsTitleUI
+{
+	border-bottom:1px solid #445571;
+}
+
+.tabsLeftPportion
+{
+	list-style:none;
+}
+
+.tabsLeftPportion li
+{
+	float:left;
+	margin-right:2px;	
+}
+
+a.tblpH
+{
+	display:block;	
+	padding:7px;
+	border-top:1px solid #455472;
+	border-left:1px solid #455472;
+	border-right:1px solid #455472;
+	width:80px;
+	text-align:center;
+	font-weight:bold;
+	text-decoration:none;
+	color:#000000;
+	background:#ececec;
+}
+
+a.currentTab
+{
+	background-color:#cccccc !important;
+}
+
+.tabsRightPortion
+{
+	float:right;	
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+
+.tabsRightPortion li
+{
+	float:left;
+	margin-left:5px;
+	padding-top:10px;	
+}
+
+
+/* accountListContainer start */
+
+.depositOneContainer
+{
+	background-color: #e2e2e2;
+	border: 1px solid #acacac;
+	margin-top: 10px;
+	padding: 15px;
+}
+
+.depositContainerLeft
+{
+	float: left;
+}
+
+.depositContainerRight
+{
+	float:left;
+	width: 410px;
+}
+
+.depositImageContent
+{
+	margin-top: 105px;
+}
+
+.depositImageContent h5
+{
+	color: #000000;
+	font-size: 12px;
+	font-weight: bold;
+	margin-bottom: 5px;
+	font-family: microsoft yahei;
+}
+
+.depositImageContent .spanSecond
+{
+	color: #000000;
+	font-size: 11px;
+	font-weight: normal;
+	font-family: microsoft yahei;
+}
+
+.depositIcon
+{
+
+}
+
+.depositIcon img
+{
+	vertical-align: middle;
+}
+
+.depositIcon span
+{
+	font-size: 22px;
+	font-weight: bold;
+	color: #000000;
+}
+
+.depositIcon p
+{
+	display: inline;
+	color: #ff0000;
+	font-size: 26px;
+	font-weight: bold;
+}
+
+.depositImage img
+{
+	vertical-align: middle;
+	display: block;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+}
+

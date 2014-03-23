@@ -1,0 +1,89 @@
+
+.mainBodyContainer{
+	width:100%;
+	height:100%;
+	background:#000;
+}
+
+/* ------------------------------------------------ Deposit 1 and 2 -------------------------------------------------- */
+
+.depositNav{
+	width: 914px;
+	height: 25px;
+	background: #000;
+	padding: 20px;
+}
+.depositNavBody{
+	width:894px;
+	height:auto;
+	background:#1b1b1b;
+	padding:30px;
+}
+.depositNavBody p{
+	color:#fff;
+	font-size:12px;
+	line-height:25px;
+	font-weight:normal;
+}
+.depositNavBody p span#depositTitle{
+	font-size:18px;
+}
+.depositNavBody h1{
+	font-size:18px;
+	color:#fff;
+	line-height:25px;
+}
+.depositNavBody ol{
+	margin:0;
+	margin-left:25px;
+	color:#fff;
+	font-size:12px;
+	font-weight:normal;
+	list-style-type:decimal;
+}
+.depositNavBody ol li{
+	line-height:25px;	
+}
+.depositNav ul{
+	list-style:none;
+	width:954px;
+}
+.depositNav ul li{
+	display:inline;
+	width:477px;
+	text-align:center;
+}
+
+.depositNav a.depositButton1,
+.depositNav a.depositButton2{
+	display:block;
+	width:64px;
+	height:30px;
+	background:url(../images/depositButton.png) no-repeat;
+	border:none;
+	text-decoration:none;
+	padding:2px 7px;
+	font-size:20px;
+	color:#FFF;
+	line-height:24px;
+}
+.depositNav a.depositButton1:hover,
+.depositNav a.depositButton2:hover{
+	color:#ffff00;
+}
+a.depositButton1{
+	float:left;
+	margin-left:200px;
+}
+a.depositButton2{
+	float:right;
+	margin-right:200px;
+}
+.depositNavBody h3{
+	font-size:12px;
+	color:#fff;
+	line-height:25px;
+}
+.depositNav a.depositActive {
+	color:#FF0;
+}
